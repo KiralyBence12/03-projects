@@ -1,22 +1,10 @@
 {
   "users": [
     {
-      "id": "2",
-      "firstName": "Blanch",
-      "lastName": "Grouvel",
-      "emailAdress": "bgrouvel1@usatoday.com"
-    },
-    {
       "id": "4",
       "firstName": "Letisha",
       "lastName": "Tirrey",
       "emailAdress": "ltirrey3@behance.net"
-    },
-    {
-      "id": "5",
-      "firstName": "Moe",
-      "lastName": "Alvy",
-      "emailAdress": "malvy4@t-online.de"
     },
     {
       "id": "6",
