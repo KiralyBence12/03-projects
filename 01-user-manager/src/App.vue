@@ -1,14 +1,14 @@
 <script setup>
-import { ref } from 'vue';
-import { onMounted } from 'vue';
-import { getUsers } from '../apis/userAPI';
+import { useUserStore } from '../store/user.js';
 
+const { users, fetchUsers } = useUserStore();
 
-const users = ref([]);
+try {
+  fetchUsers();
+} catch (error) {
+  console.error('Error fetching users:', error);
+}
 
-onMounted(async () => {
-  users.value = await getUsers();
-})
 </script>
 
 <template>
