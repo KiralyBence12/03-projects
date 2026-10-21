@@ -1,5 +1,7 @@
 <script setup>
     import { useUserStore } from '../../store/user.js';
+    import EditUserModal from './EditUserModal.vue';
+
     const { users, removeUser } = useUserStore();
 
     
@@ -27,11 +29,14 @@
           <td>{{ user.lastName }}</td>
           <td>{{ user.email }}</td>
           <td>
-            <button class="btn btn-primary">Edit</button>
+            <button type=button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editUserModal">Edit</button>
             <button class="btn btn-danger" @click="handleDeleteClick(user.id)">Delete</button>
           </td>
         </tr>
     </tbody>
 
   </table>
+
+    <EditUserModal/>
+
 </template>

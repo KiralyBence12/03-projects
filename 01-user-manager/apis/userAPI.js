@@ -10,3 +10,8 @@ export async function getUsers() {
 export async function deleteUser(id) {
     const response = await apiClient.delete(`${urlFragment}/${id}`);
 }
+
+export async function updateUser(userId, updatedUser) {
+    const response = await apiClient.put(`${urlFragment}/${userId}`, updatedUser);
+    return response.data;
+}
